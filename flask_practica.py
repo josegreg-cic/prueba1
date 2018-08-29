@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/<categoria>')
 def imprime(categoria):
-    with open('C:/Users/MB68387/Documents/LPHW/noticias.json', 'r') as jfile1 :
+    with open('noticias.json', 'r', encoding="utf-8") as jfile1 :
         data_news = json.load(jfile1)
 
     #categor = { el['Categoria'] for el in data_news }
