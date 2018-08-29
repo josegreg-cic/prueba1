@@ -11,8 +11,7 @@ def imprime(categoria):
     with open('noticias.json', 'r', encoding="utf-8") as jfile1 :
         data_news = json.load(jfile1)
 
-    #categor = { el['Categoria'] for el in data_news }
-    #feed = [el for el in data_news if el['Categoria'] == categoria ]
+   
         
     #if categoria in categor:
     responde = Response(json.dumps([noti for noti in data_news if noti['Categoria']==str(categoria)]), content_type = "application/json; charset=utf-8")
